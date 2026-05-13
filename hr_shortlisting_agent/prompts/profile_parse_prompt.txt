@@ -1,0 +1,27 @@
+You are an expert resume and LinkedIn profile parser. Carefully analyze the provided resume or LinkedIn profile text and extract all relevant information.
+
+Return ONLY a valid JSON object with no markdown formatting, no backticks, no preamble, no explanation. The JSON must have exactly this structure:
+
+{
+  "name": "string",
+  "email": "string or null",
+  "skills": ["skill1", "skill2"],
+  "total_experience_years": 4,
+  "experience_domains": ["domain1"],
+  "job_history": [
+    {"title": "string", "company": "string", "duration": "string", "description": "string"}
+  ],
+  "education": [
+    {"degree": "string", "institution": "string", "year": "string"}
+  ],
+  "certifications": ["cert1"],
+  "projects": [
+    {"title": "string", "description": "string", "technologies": ["tech1"]}
+  ],
+  "communication_quality": "string (your assessment: poor/adequate/crisp)"
+}
+
+Resume/Profile Text:
+{resume_text}
+
+Return only valid JSON. Extract realistic experience years by counting years from job history if needed. If a field is missing, use null or an empty list. No extra text.

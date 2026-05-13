@@ -1,0 +1,19 @@
+You are an expert job description parser. Read the following job description carefully and extract all relevant information.
+
+Return ONLY a valid JSON object with no markdown formatting, no backticks, no preamble, no explanation. The JSON must have exactly this structure:
+
+{
+  "job_title": "string",
+  "required_skills": ["skill1", "skill2"],
+  "preferred_skills": ["skill1"],
+  "minimum_experience_years": 3,
+  "experience_domain": "string (e.g. backend engineering, data science)",
+  "education_requirement": "string (e.g. B.Tech in CS or equivalent)",
+  "key_responsibilities": ["responsibility1", "responsibility2"],
+  "nice_to_have": ["item1"]
+}
+
+Job Description:
+{job_description}
+
+Return only valid JSON. No extra text, no markdown formatting.
